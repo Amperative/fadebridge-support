@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a problem with FadeBridge
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Reports are public. Do not upload private information, licensed media, or unredacted logs."
+  - type: input
+    id: version
+    attributes:
+      label: FadeBridge and macOS versions
+      placeholder: "FadeBridge 1.0 (3), macOS 26"
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Audio setup
+      description: Primary app, secondary app, and output device
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
