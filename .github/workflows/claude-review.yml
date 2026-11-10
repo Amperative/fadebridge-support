@@ -4,11 +4,6 @@ on:
   pull_request:
     types: [opened, ready_for_review, synchronize, reopened]
 
-permissions:
-  id-token: write
-  contents: read
-  pull-requests: write
-
 concurrency:
   group: claude-review-${{ github.event.pull_request.number }}
   cancel-in-progress: true
@@ -16,4 +11,8 @@ concurrency:
 jobs:
   review:
     if: ${{ !github.event.pull_request.draft && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login != 'dependabot[bot]' }}
-    uses: Amperative/.github/.github/workflows/claude-review.yml@3fc23a24adbeb2285d060ba83ae9cfa200b00678
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+    uses: Amperative/.github/.github/workflows/claude-review.yml@dd779295ad77e5bdd6fb144ce2b444b32ff931ae # shared review 2026-11-10
