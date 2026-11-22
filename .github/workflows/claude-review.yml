@@ -18,4 +18,4 @@ jobs:
       contents: read
       pull-requests: write
     # The shared workflow authenticates with GitHub OIDC; no repository secrets are passed.
-    uses: Amperative/.github/.github/workflows/claude-review.yml@6e0ae488f60ac070a315a31eaf079e74c2762ef4 # shared review diagnostics 2026-11-22
+    uses: Amperative/review-workflows/.github/workflows/claude-review.yml@7e2e6e2b5a60cf8a917256343e7e7b3b7f995b40 # shared review diagnostics 2026-11-22
